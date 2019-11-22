@@ -95,3 +95,32 @@ Java_com_rzm_c_utils_JniUtils_changeJavaField2(JNIEnv *env, jobject instance, jo
     return newString;
 
 }
+
+/**
+ * c++修改Java对象中的静态属性值
+ */
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_com_rzm_c_utils_JniUtils_changeJavaStaticField(JNIEnv *env, jobject instance, jobject object) {
+
+    jclass objClass = env->GetObjectClass(object);
+    jfieldID objFieldId = env->GetStaticFieldID(objClass,"keyStatic","Ljava/lang/String;");
+    if (objFieldId == NULL){
+        return NULL;
+    }
+    jstring objStr = (jstring) env->GetStaticObjectField(objClass, objFieldId);
+    char* objChar = (char *) env->GetStringUTFChars(objStr, JNI_FALSE);
+    if(objChar == NULL){
+        return NULL;
+    }
+    char* temp = "what day is it today?";
+    jstring objNew;
+    if (strcmp(objChar,temp) == 0){
+        objNew = env->NewStringUTF("today is friday");
+    }else{
+        objNew = env->NewStringUTF("wrong");
+    }
+    env->SetStaticObjectField(objClass,objFieldId,objNew);
+    env->ReleaseStringUTFChars(objStr,objChar);
+    return objNew;
+}

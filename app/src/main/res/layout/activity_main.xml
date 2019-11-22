@@ -19,4 +19,10 @@
         android:layout_height="wrap_content"
         android:text="c++修改指定的Java对象中的属性值"
         android:onClick="changeField2" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="c++修改Java对象中的静态属性值"
+        android:onClick="changeStaticField" />
 </LinearLayout>

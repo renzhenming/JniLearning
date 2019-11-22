@@ -18,4 +18,11 @@ public class JniUtils {
      */
     public native String changeJavaField();
     public native String changeJavaField2(Object object);
+
+    /**
+     * c++修改Java对象中的静态属性值
+     * @param object
+     * @return
+     */
+    public native String changeJavaStaticField(Object object);
 }

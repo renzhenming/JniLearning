@@ -52,4 +52,16 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),"修改后"+instance.key,Toast.LENGTH_SHORT).show();
         Log.d(TAG,"修改后"+instance.key);
     }
+
+    /**
+     * c++修改Java对象中的静态属性值
+     * @param view
+     */
+    public void changeStaticField(View view) {
+        Log.d(TAG,"修改前"+instance.keyStatic);
+        Toast.makeText(getApplicationContext(),"修改前"+instance.keyStatic,Toast.LENGTH_SHORT).show();
+        String s = utils.changeJavaStaticField(instance);
+        Toast.makeText(getApplicationContext(),"修改后"+instance.keyStatic,Toast.LENGTH_SHORT).show();
+        Log.d(TAG,"修改后"+instance.keyStatic);
+    }
 }
