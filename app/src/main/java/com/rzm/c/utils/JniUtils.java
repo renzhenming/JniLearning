@@ -17,4 +17,5 @@ public class JniUtils {
      * 访问Java对象的非静态变量
      */
     public native String changeJavaField();
+    public native String changeJavaField2(Object object);
 }

@@ -73,4 +73,25 @@ Java_com_rzm_c_utils_JniUtils_changeJavaField(JNIEnv *env, jobject instance) {
     env->ReleaseStringUTFChars(field,ctr);
 
     return newString;
+}extern "C"
+JNIEXPORT jstring JNICALL
+Java_com_rzm_c_utils_JniUtils_changeJavaField2(JNIEnv *env, jobject instance, jobject object) {
+
+    jclass objClass = env->GetObjectClass(object);
+    jfieldID fieldId = env->GetFieldID(objClass,"key","Ljava/lang/String;");
+    if (fieldId == NULL){
+        return NULL;
+    }
+    jstring field = (jstring) env->GetObjectField(object, fieldId);
+    char* ctr = (char *) env->GetStringUTFChars(field, NULL);
+    if (ctr == NULL){
+        return NULL;
+    }
+    char text[sizeof(" i am toy")+1] = " i am toy";
+    strcat(ctr,text);
+    jstring newString = env->NewStringUTF(ctr);
+    env->SetObjectField(object,fieldId,newString);
+    env->ReleaseStringUTFChars(field,ctr);
+    return newString;
+
 }
