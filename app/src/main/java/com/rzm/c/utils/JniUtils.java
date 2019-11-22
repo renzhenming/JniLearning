@@ -1,5 +1,10 @@
 package com.rzm.c.utils;
 
+import android.content.Context;
+
+import com.rzm.c.JavaInstance;
+import com.rzm.c.MainActivity;
+
 /**
  * Created by renzm on 2019/11/22.
  */
@@ -25,4 +30,17 @@ public class JniUtils {
      * @return
      */
     public native String changeJavaStaticField(Object object);
+
+    /**
+     * c++调用Java中的成员方法
+     * @param object
+     * @param context
+     */
+    public native void callJavaMethod(Object object, Context context);
+
+    /**
+     * C++调用Java静态成员方法
+     * @param object
+     */
+    public native void callJavaStaticMethod(Object object,Object object2);
 }

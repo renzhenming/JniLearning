@@ -64,4 +64,20 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),"修改后"+instance.keyStatic,Toast.LENGTH_SHORT).show();
         Log.d(TAG,"修改后"+instance.keyStatic);
     }
+
+    /**
+     * c++调用Java中的成员方法
+     * @param view
+     */
+    public void callJavaMethod(View view) {
+        utils.callJavaMethod(instance,this);
+    }
+
+    /**
+     * C++调用Java静态成员方法
+     * @param view
+     */
+    public void callJavaStaticMethod(View view) {
+        utils.callJavaStaticMethod(instance,this);
+    }
 }

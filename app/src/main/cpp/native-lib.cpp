@@ -124,3 +124,31 @@ Java_com_rzm_c_utils_JniUtils_changeJavaStaticField(JNIEnv *env, jobject instanc
     env->ReleaseStringUTFChars(objStr,objChar);
     return objNew;
 }
+/**
+ * c++调用Java中的成员方法
+ */
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_rzm_c_utils_JniUtils_callJavaMethod(JNIEnv *env, jobject instance, jobject object,jobject context) {
+
+    jclass jclass = env->GetObjectClass(object);
+    jmethodID  jmethodID = env->GetMethodID(jclass,"showToast","(Landroid/content/Context;)V");
+    env->CallVoidMethod(object,jmethodID,context);
+
+    //CallxxxMethod xxx表示方法返回值类型
+//    env->CallIntMethod()
+//    env->CallFloatMethod()
+//    env->CallLongMethod()
+//    env->CallObjectMethod()
+}
+
+/**
+ * C++调用Java静态成员方法
+ */
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_rzm_c_utils_JniUtils_callJavaStaticMethod(JNIEnv *env, jobject instance, jobject object,jobject context) {
+    jclass objClass = env->GetObjectClass(object);
+    jmethodID methodId = env->GetStaticMethodID(objClass,"showToast2","(Landroid/content/Context;)V");
+    env->CallStaticVoidMethod(objClass,methodId,context);
+}
