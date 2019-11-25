@@ -1,6 +1,7 @@
 package com.rzm.c;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Toast;
 
 /**
@@ -19,5 +20,10 @@ public class JavaInstance {
 
     public static void showToast2(Context context){
         Toast.makeText(context,"调用了Java静态方法",Toast.LENGTH_SHORT).show();
+    }
+
+    public void log(Context context){
+        Log.d("JavaInstance","父类log");
+        Toast.makeText(context,"调用了父类方法",Toast.LENGTH_SHORT).show();
     }
 }

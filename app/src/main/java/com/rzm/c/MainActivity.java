@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private JniUtils utils;
     private JavaInstance instance;
+    private JavaInstance childInstance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         utils = new JniUtils();
         instance = new JavaInstance();
+        childInstance = new JavaInstanceChildren();
     }
 
     /**
@@ -79,5 +81,30 @@ public class MainActivity extends AppCompatActivity {
      */
     public void callJavaStaticMethod(View view) {
         utils.callJavaStaticMethod(instance,this);
+    }
+
+    /**
+     * C++调用Java构造方法
+     * @param view
+     */
+    public void callJavaConstructMethod(View view) {
+        long time = utils.callJavaConstructMethod(instance);
+        System.out.println("getTime = "+time);
+    }
+
+    /**
+     *  C++调用被子类覆盖的父类方法
+     * @param view
+     */
+    public void callJavaNonVirtualMethod(View view) {
+        utils.callJavaNonVirtualMethod(childInstance,this);
+    }
+
+    /**
+     * C++调用子类重写父类后的方法
+     * @param view
+     */
+    public void callJavaOverrideMethod(View view) {
+        utils.callJavaVirtualMethod(childInstance,this);
     }
 }

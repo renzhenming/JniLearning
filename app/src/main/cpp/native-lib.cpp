@@ -152,3 +152,68 @@ Java_com_rzm_c_utils_JniUtils_callJavaStaticMethod(JNIEnv *env, jobject instance
     jmethodID methodId = env->GetStaticMethodID(objClass,"showToast2","(Landroid/content/Context;)V");
     env->CallStaticVoidMethod(objClass,methodId,context);
 }
+/**
+ * C++调用Java构造方法
+ * @param view
+ */
+extern "C"
+JNIEXPORT jlong JNICALL
+Java_com_rzm_c_utils_JniUtils_callJavaConstructMethod(JNIEnv *env, jobject instance,
+                                                      jobject object) {
+
+    //通过调用Java中的Date获取当前时间,//根据包名得到类，类似反射
+    jclass dateClass = env->FindClass("java/util/Date");
+    if(dateClass == NULL)
+        return 0;
+    //(获取构造方法，方法名传"<init>")
+    jmethodID methodId = env->GetMethodID(dateClass,"<init>","()V");
+    if(methodId == NULL)
+        return 0;
+    ////实例化一个对象，类似反射
+    jobject dateobj = env->NewObject(dateClass,methodId);
+    jmethodID getTimeMethodId = env->GetMethodID(dateClass,"getTime","()J");
+    if (getTimeMethodId == NULL)
+        return 0;
+    jlong timeMills = env->CallLongMethod(dateobj,getTimeMethodId);
+    printf("时间：%lld",timeMills);
+    env->DeleteLocalRef(dateobj);
+    return timeMills;
+}
+
+/**
+ * C++调用被子类覆盖的父类方法
+ * FindClass( ) 和 getObjectClass( )的区别？
+ * FindClass( ) 就是通过包名类名去找，这个相当于绝对路径
+ * getObjectClass( ) 是通过一个obj的类型去找，这个地方需要注意的是，他是通过对象类型去找，不是通过引用类型去找
+ * 比如一开始在java 里面写了
+ * Father p=new Child();
+ * 那么在C＋＋里面获得这个obj之后，如果用getObjectClass( ) 获得的就是 Child 的 Class ， 不是 Father 的 Class
+ */
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_rzm_c_utils_JniUtils_callJavaNonVirtualMethod(JNIEnv *env, jobject instance,jobject obj,jobject context) {
+
+    env->GetObjectClass(obj);
+    jclass fClass = env->FindClass("com/rzm/c/JavaInstance");
+    //这里通过传入父类的class去寻找log方法，如果传入子类的class，那么是调用不到父类的log方法的
+    //比如我们通过env->GetObjectClass(obj)获取class后传入，虽然这个obj在Java中是父类引用指向子类
+    //对象，但是其实获取到的class是子类的class
+    jmethodID methodId = env->GetMethodID(fClass,"log","(Landroid/content/Context;)V");
+    env->CallNonvirtualVoidMethod(obj,fClass,methodId,context);
+
+
+}
+/**
+ * C++调用子类重写父类后的方法
+ * @param view
+ */
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_rzm_c_utils_JniUtils_callJavaVirtualMethod(JNIEnv *env, jobject instance, jobject object,
+                                                    jobject context) {
+
+    jclass fClass = env->FindClass("com/rzm/c/JavaInstance");
+    jmethodID methodId = env->GetMethodID(fClass,"log","(Landroid/content/Context;)V");
+    env->CallVoidMethod(object,methodId,context);
+
+}

@@ -43,4 +43,20 @@ public class JniUtils {
      * @param object
      */
     public native void callJavaStaticMethod(Object object,Object object2);
+
+    /**
+     * C++调用Java构造方法
+     * @param object
+     */
+    public native long callJavaConstructMethod(Object object);
+
+    /**
+     * C++调用被子类覆盖的父类方法
+     */
+    public native void callJavaNonVirtualMethod(Object object,Context context);
+
+    /**
+     * C++调用被子类覆盖的父类方法
+     */
+    public native void callJavaVirtualMethod(Object object, Context context);
 }

@@ -37,4 +37,22 @@
         android:layout_height="wrap_content"
         android:text="C++调用Java静态成员方法"
         android:onClick="callJavaStaticMethod" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C++调用Java构造方法"
+        android:onClick="callJavaConstructMethod" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C++调用被子类覆盖的父类方法"
+        android:onClick="callJavaNonVirtualMethod" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C++调用子类重写父类后的方法"
+        android:onClick="callJavaOverrideMethod" />
 </LinearLayout>
