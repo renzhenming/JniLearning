@@ -59,4 +59,26 @@ public class JniUtils {
      * C++调用被子类覆盖的父类方法
      */
     public native void callJavaVirtualMethod(Object object, Context context);
+
+    /**
+     * C++操作Java中的数组
+     */
+    public native void setJavaArray(int[] arr);
+
+    /**
+     * C++操作Java中的字符串
+     * @param value
+     */
+    public native void setString(String value) ;
+
+    /**
+     * C++层返回一个数组到Java层
+     * @return
+     */
+    public native int[] getArray();
+
+    /**
+     * C++层抛出异常到Java层
+     */
+    public native void catchException(Object object) ;
 }

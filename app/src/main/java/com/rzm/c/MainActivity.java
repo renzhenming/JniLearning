@@ -107,4 +107,52 @@ public class MainActivity extends AppCompatActivity {
     public void callJavaOverrideMethod(View view) {
         utils.callJavaVirtualMethod(childInstance,this);
     }
+
+    /**
+     * C++操作Java中的数组
+     * @param view
+     */
+    public void modifyJavaArray(View view) {
+        int arr [] = {12,3,43,55,44,1,566};
+        utils.setJavaArray(arr);
+        for (int i : arr) {
+            System.out.println(i);
+        }
+        //打印发现第一个元素变成了999
+    }
+
+    /**
+     * C++操作Java中的字符串
+     * @param view
+     */
+    public void modifyJavaString(View view) {
+        String value = "tomorrow is good";
+        utils.setString(value);
+        System.out.println(value);
+    }
+
+    /**
+     * C++层返回一个数组到Java层
+     * @param view
+     */
+    public void returnArrayFromCPP(View view) {
+        int arr[] = utils.getArray();
+        for (int i : arr) {
+            System.out.println(i);
+        }
+    }
+
+    /**
+     * C++层抛出异常到Java层
+     * @param view
+     */
+    public void throwException(View view) {
+        try {
+            utils.catchException(instance);
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("发生异常："+e.getMessage());
+        } finally {
+        }
+    }
 }

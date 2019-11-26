@@ -217,3 +217,81 @@ Java_com_rzm_c_utils_JniUtils_callJavaVirtualMethod(JNIEnv *env, jobject instanc
     env->CallVoidMethod(object,methodId,context);
 
 }
+
+/**
+ * C++操作Java中的数组
+ */
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_rzm_c_utils_JniUtils_setJavaArray(JNIEnv *env, jobject instance, jintArray arr_) {
+    jint *arr = env->GetIntArrayElements(arr_, NULL);
+    arr[0] = 999;
+
+    //将排序结果同步到Java中的数组
+    //最后一个参数 mode
+    //0  表示Java数组进行更新，并且释放c/c++数组
+    //JNI_ABORT  表示Java数组不更新，释放c/c++数组
+    //JNI_COMMIT 表示Java数组进行更新，但不释放c/c++数组
+    //TODO 最后一个参数是对Java层数组修改的关键
+    env->ReleaseIntArrayElements(arr_, arr, 0);
+}
+
+/**
+ * C++操作Java中的字符串
+ */
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_rzm_c_utils_JniUtils_setString(JNIEnv *env, jobject instance, jstring value_) {
+    char *value = (char *) env->GetStringUTFChars(value_, 0);
+
+    //将第一个字母变成a
+    value[0] = 'a';
+
+    //ReleaseStringUTFChars 告诉 JVM 这个 UTF-8 字符串不会被使用了，因为这个 UTF-8 字符串占用的内存会被回收。
+    //TODO ReleaseStringUTFChars不同于ReleaseIntArrayElements，ReleaseStringUTFChars只是回收，不会修改Java层字符串值
+    env->ReleaseStringUTFChars(value_, value);
+}
+
+/**
+ * C++层返回一个数组到Java层
+ */
+extern "C"
+JNIEXPORT jintArray JNICALL
+Java_com_rzm_c_utils_JniUtils_getArray(JNIEnv *env, jobject instance) {
+
+    jintArray array = env->NewIntArray(10);
+    jint * elem = env->GetIntArrayElements(array,JNI_FALSE);
+    for (int i = 0;i<10;i++){
+        elem[i] = i*100;
+    }
+    env->ReleaseIntArrayElements(array,elem,JNI_FALSE);
+    return array;
+}
+
+/**
+ * C++层抛出异常到Java层
+ */
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_rzm_c_utils_JniUtils_catchException(JNIEnv *env, jobject instance,jobject obj) {
+
+    jclass objClass = env->GetObjectClass(obj);
+    jfieldID fieldId = env->GetFieldID(objClass,"key2","Ljava/lang/String;");
+    //检测是否发生Java异常
+    jthrowable exception = env->ExceptionOccurred();
+    if (exception != NULL){
+        //让Java代码可以继续运行
+        //清空异常信息
+        env->ExceptionClear();
+        //补救措施
+        fieldId = env->GetFieldID(objClass,"key","Ljava/lang/String;");
+    }
+    //获取属性值
+    jstring jstr = (jstring) env->GetObjectField(obj, fieldId);
+    char *str = (char *) env->GetStringUTFChars(jstr, NULL);
+    if (strcmp(str,"hello") != 0){
+        //抛出异常，让Java端处理
+        jclass newExc = env->FindClass("java/lang/IllegalArgumentException");
+        env->ThrowNew(newExc,"wrong");
+    }
+}
