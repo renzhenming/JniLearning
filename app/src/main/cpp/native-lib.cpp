@@ -295,3 +295,22 @@ Java_com_rzm_c_utils_JniUtils_catchException(JNIEnv *env, jobject instance,jobje
         env->ThrowNew(newExc,"wrong");
     }
 }
+
+/**
+ * 局部引用
+ */
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_rzm_c_utils_JniUtils_localReference(JNIEnv *env, jobject instance) {
+
+    for(int i = 0;i<10;i++){
+        jclass dateClass = env->FindClass("java/util/Date");
+        jmethodID dateMethodId = env->GetMethodID(dateClass,"<init>","()V");
+        jobject obj = env->NewObject(dateClass,dateMethodId);
+        jmethodID getTimeMethodId = env->GetMethodID(dateClass,"getTime","()J");
+        jlong time = env->CallLongMethod(obj,getTimeMethodId);
+        printf("aaaaaaaaa = %lld",time);
+        env->DeleteLocalRef(obj);
+    }
+
+}

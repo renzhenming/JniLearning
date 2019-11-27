@@ -155,4 +155,12 @@ public class MainActivity extends AppCompatActivity {
         } finally {
         }
     }
+
+    /**
+     * C++局部引用
+     * @param view
+     */
+    public void localReference(View view) {
+        utils.localReference();
+    }
 }

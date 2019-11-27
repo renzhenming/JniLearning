@@ -81,4 +81,9 @@ public class JniUtils {
      * C++层抛出异常到Java层
      */
     public native void catchException(Object object) ;
+
+    /**
+     * 局部引用
+     */
+    public native void localReference() ;
 }

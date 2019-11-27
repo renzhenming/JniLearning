@@ -84,5 +84,11 @@
             android:layout_height="wrap_content"
             android:onClick="throwException"
             android:text="C++层抛出异常到Java层" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="localReference"
+            android:text="C++局部引用" />
     </LinearLayout>
 </ScrollView>
