@@ -90,5 +90,17 @@
             android:layout_height="wrap_content"
             android:onClick="localReference"
             android:text="C++局部引用" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="createGlobalReference"
+            android:text="C++创建全局引用" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="deleteGlobalReference"
+            android:text="C++销毁全局引用" />
     </LinearLayout>
 </ScrollView>

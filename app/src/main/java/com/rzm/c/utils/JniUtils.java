@@ -86,4 +86,15 @@ public class JniUtils {
      * 局部引用
      */
     public native void localReference() ;
+
+    /**
+     * C++创建全局引用
+     */
+    public native boolean createGlobalReference();
+
+    /**
+     * C++删除全局引用
+     * @return
+     */
+    public native boolean deleteGlobalReference();
 }

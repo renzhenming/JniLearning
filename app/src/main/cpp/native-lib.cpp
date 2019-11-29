@@ -314,3 +314,29 @@ Java_com_rzm_c_utils_JniUtils_localReference(JNIEnv *env, jobject instance) {
     }
 
 }
+
+/**
+ * C++创建全局引用
+ */
+
+jstring jGlobalStrenv;
+extern "C"
+JNIEXPORT jboolean JNICALL
+Java_com_rzm_c_utils_JniUtils_createGlobalReference(JNIEnv *env, jobject instance) {
+    jstring jstr = env->NewStringUTF("jni is a bitch");
+    jGlobalStrenv = (jstring)env->NewGlobalRef(jstr);
+    if (jGlobalStrenv != NULL){
+        return true;
+    }
+    return false;
+}
+
+/**
+ * 删除全局引用
+ */
+extern "C"
+JNIEXPORT jboolean JNICALL
+Java_com_rzm_c_utils_JniUtils_deleteGlobalReference(JNIEnv *env, jobject instance) {
+    env->DeleteGlobalRef(jGlobalStrenv);
+    return true;
+}

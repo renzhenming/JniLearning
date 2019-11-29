@@ -163,4 +163,26 @@ public class MainActivity extends AppCompatActivity {
     public void localReference(View view) {
         utils.localReference();
     }
+
+    /**
+     * C++创建全局引用
+     * @param view
+     */
+    public void createGlobalReference(View view) {
+        boolean finish = utils.createGlobalReference();
+        if (finish){
+            Toast.makeText(getApplicationContext(),"创建成功",Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    /**
+     * C++销毁全局引用
+     * @param view
+     */
+    public void deleteGlobalReference(View view) {
+        boolean delete  = utils.deleteGlobalReference();
+        if (delete){
+            Toast.makeText(getApplicationContext(),"删除成功",Toast.LENGTH_SHORT).show();
+        }
+    }
 }
