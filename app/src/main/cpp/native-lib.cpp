@@ -37,7 +37,7 @@ JNINativeMethod method[] = {
 
 // VM将在加载Library时调用JNI_OnLoad。它需要返回native需要的JNI版本。
 jint JNI_OnLoad(JavaVM *vm, void *reserved) {
-
+    cout << "JNI_OnLoad" << endl;
     JNIEnv *env = NULL;
     if (vm->GetEnv((void **) &env, JNI_VERSION_1_2) != JNI_OK) {
         cout << "Get env " << std::hex << JNI_VERSION_1_2 << " failed" << endl;
@@ -59,7 +59,18 @@ jint JNI_OnLoad(JavaVM *vm, void *reserved) {
 
 // 当加载Library的类被垃圾回收时，VM会调用JNI_OnUnload。
 void JNI_OnUnload(JavaVM *vm, void *reserved) {
-
+    cout << "JNI_OnUnload" << endl;
+    JNIEnv *env = NULL;
+    if (vm->GetEnv((void **) &env, JNI_VERSION_1_2) != JNI_OK) {
+        cout << "JNI_OnUnload Get env " << std::hex << JNI_VERSION_1_2 << " failed" << endl;
+        return;
+    }
+    jclass dynamicClass = env->FindClass("com/rzm/c/utils/JniDynamicUtils");
+    if (dynamicClass == NULL) {
+        cout << "JNI_OnUnload find class JniDynamicUtils failed" << endl;
+        return;
+    }
+    env->UnregisterNatives(dynamicClass);
 }
 
 /**
