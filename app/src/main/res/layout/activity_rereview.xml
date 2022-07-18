@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.rzm.c.MainActivity">
+
+        <Button
+            android:id="@+id/sample_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeField"
+            android:text="c++修改Java对象中的属性值" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeField2"
+            android:text="c++修改指定的Java对象中的属性值" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeStaticField"
+            android:text="c++修改Java对象中的静态属性值" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callJavaMethod"
+            android:text="c++调用Java中的成员方法" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callJavaStaticMethod"
+            android:text="C++调用Java静态成员方法" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callJavaConstructMethod"
+            android:text="C++调用Java构造方法" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callJavaNonVirtualMethod"
+            android:text="C++调用被子类覆盖的父类方法" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callJavaOverrideMethod"
+            android:text="C++调用子类重写父类后的方法" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="modifyJavaArray"
+            android:text="C++操作Java中的数组" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="modifyJavaString"
+            android:text="C++操作Java中的字符串" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="returnArrayFromCPP"
+            android:text="C++层返回一个数组到Java层" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="throwException"
+            android:text="C++层抛出异常到Java层" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="localReference"
+            android:text="C++局部引用" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="createGlobalReference"
+            android:text="C++创建全局引用" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="deleteGlobalReference"
+            android:text="C++销毁全局引用" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,25 @@
+{
+  "buildFiles": [
+    "/Users/renzhenming/Library/Android/sdk/ndk/20.0.5594570/build/cmake/android.toolchain.cmake",
+    "/Users/renzhenming/Library/Android/sdk/ndk/20.0.5594570/build/cmake/platforms.cmake",
+    "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/x86\" clean"
+  ],
+  "buildTargetsCommand": "/Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "native-lib2-Debug-x86": {
+      "artifactName": "native-lib2",
+      "buildCommand": "/Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/x86\" native-lib2",
+      "abi": "x86",
+      "output": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/x86/libnative-lib2.so"
+    },
+    "native-lib-Debug-x86": {
+      "artifactName": "native-lib",
+      "buildCommand": "/Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/x86\" native-lib",
+      "abi": "x86",
+      "output": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so"
+    }
+  }
+}

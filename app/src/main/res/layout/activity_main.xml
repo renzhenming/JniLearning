@@ -102,5 +102,18 @@
             android:layout_height="wrap_content"
             android:onClick="deleteGlobalReference"
             android:text="C++销毁全局引用" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="dynamicShowToast"
+            android:text="动态注册方法，showToast" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="dynamicLog"
+            android:text="动态注册方法，log" />
     </LinearLayout>
 </ScrollView>
