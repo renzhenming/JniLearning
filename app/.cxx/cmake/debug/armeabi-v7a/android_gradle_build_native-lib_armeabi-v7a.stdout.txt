@@ -1,2 +1,6 @@
-ninja: Entering directory `/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a'
-ninja: no work to do.
+[1/2] Building CXX object CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o
+/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/native-lib.cpp:196:18: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+    char *temp = " what day is it today?";
+                 ^
+1 warning generated.
+[2/2] Linking CXX shared library ../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so

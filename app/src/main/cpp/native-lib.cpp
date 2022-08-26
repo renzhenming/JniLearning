@@ -380,6 +380,25 @@ Java_com_rzm_c_utils_JniUtils_catchException(JNIEnv *env, jobject instance, jobj
 }
 
 /**
+ * C++处理java层抛出的异常
+ */
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_rzm_c_utils_JniUtils_catchException2(JNIEnv *env, jobject thiz) {
+    LOGI("native层:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>1");
+    jclass javaClass = env->GetObjectClass(thiz);
+    jmethodID javaMethodId = env->GetMethodID(javaClass, "javaThrowException", "()V");
+    env->CallVoidMethod(thiz, javaMethodId);
+
+    //CallVoidMethod发生异常后并不会马上崩溃，而是预留了时间，给我们处理
+    if (env->ExceptionCheck()) {
+        env->ExceptionDescribe();
+        env->ExceptionClear();
+    }
+    LOGI("native层:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2");
+}
+
+/**
  * 局部引用
  */
 extern "C"

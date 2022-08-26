@@ -177,6 +177,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * C++处理java层的异常
+     */
+    public void catchException(View view) {
+        utils.catchException2();
+    }
+
+    /**
      * C++局部引用
      *
      * @param view

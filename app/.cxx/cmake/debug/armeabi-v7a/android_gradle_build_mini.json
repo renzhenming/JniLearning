@@ -1,23 +1,20 @@
 {
   "buildFiles": [
-    "/Users/renzhenming/Library/Android/sdk/ndk/20.0.5594570/build/cmake/android.toolchain.cmake",
-    "/Users/renzhenming/Library/Android/sdk/ndk/20.0.5594570/build/cmake/platforms.cmake",
     "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/CMakeLists.txt"
   ],
   "cleanCommands": [
-    "/Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a\" clean"
+    "/Users/renzhenming/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a --target clean"
   ],
-  "buildTargetsCommand": "/Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
     "native-lib2-Debug-armeabi-v7a": {
       "artifactName": "native-lib2",
-      "buildCommand": "/Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a\" native-lib2",
+      "buildCommand": "/Users/renzhenming/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a --target native-lib2",
       "abi": "armeabi-v7a",
       "output": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib2.so"
     },
     "native-lib-Debug-armeabi-v7a": {
       "artifactName": "native-lib",
-      "buildCommand": "/Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a\" native-lib",
+      "buildCommand": "/Users/renzhenming/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a --target native-lib",
       "abi": "armeabi-v7a",
       "output": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so"
     }

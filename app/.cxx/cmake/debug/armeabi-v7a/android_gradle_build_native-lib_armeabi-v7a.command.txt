@@ -1,7 +1,8 @@
-Executable : /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja
+Executable : /Users/renzhenming/Library/Android/sdk/cmake/3.6.4111459/bin/cmake
 arguments : 
--C
+--build
 /Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a
+--target
 native-lib
 jvmArgs : 
 

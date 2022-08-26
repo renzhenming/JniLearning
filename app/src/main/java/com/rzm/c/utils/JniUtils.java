@@ -1,6 +1,7 @@
 package com.rzm.c.utils;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.rzm.c.JavaInstance;
 import com.rzm.c.MainActivity;
@@ -16,6 +17,15 @@ public class JniUtils {
 
     static{
         System.loadLibrary("native-lib");
+    }
+
+
+    public void javaThrowException() {
+        Log.d("JniUtils", "javaThrowException before");
+        if (true) {
+            throw new NullPointerException("空指针异常。。。。。");
+        }
+        Log.d("JniUtils", "javaThrowException after");
     }
 
     /**
@@ -81,6 +91,11 @@ public class JniUtils {
      * C++层抛出异常到Java层
      */
     public native void catchException(Object object) ;
+
+    /**
+     * C++调用java方法时，java内部发生异常
+     */
+    public native void catchException2();
 
     /**
      * 局部引用
