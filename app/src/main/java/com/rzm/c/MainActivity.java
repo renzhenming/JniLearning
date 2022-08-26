@@ -1,10 +1,12 @@
 package com.rzm.c;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.rzm.c.utils.JniDynamicUtils;
 import com.rzm.c.utils.JniUtils;
@@ -26,6 +28,15 @@ public class MainActivity extends AppCompatActivity {
         utils = new JniUtils();
         instance = new JavaInstance();
         childInstance = new JavaInstanceChildren();
+    }
+
+    /**
+     * c++中线程的使用
+     *
+     * @param view
+     */
+    public void makeThread(View view) {
+        startActivity(new Intent(getApplicationContext(), ThreadActivity.class));
     }
 
     /**

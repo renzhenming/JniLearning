@@ -1,16 +1,13 @@
 package com.rzm.c.test;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.rzm.c.JavaInstance;
-import com.rzm.c.JavaInstanceChildren;
-import com.rzm.c.R;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
+import com.rzm.c.R;
 
 public class PreviewActivity extends AppCompatActivity {
 

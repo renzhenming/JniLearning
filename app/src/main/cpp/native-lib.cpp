@@ -1,6 +1,16 @@
 #include <jni.h>
 #include <string>
 #include <iostream>
+#include <pthread.h>
+
+// 日志输出
+#include <android/log.h>
+
+#define TAG "JNISTUDY"
+// __VA_ARGS__ 代表 ...的可变参数
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__);
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__);
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO, TAG, __VA_ARGS__);
 
 using namespace std;
 
@@ -17,7 +27,7 @@ void showToast(JNIEnv *env, jobject jobj, jobject context) {
     env->DeleteLocalRef(toastObj);
 }
 
-void log(JNIEnv *env, jobject jobj, jstring str) {
+void jLog(JNIEnv *env, jobject jobj, jstring str) {
     cout << "log:" << str << endl;
     jclass logClass = env->FindClass("android/util/Log");
     jmethodID dMethodId = env->GetStaticMethodID(logClass, "d",
@@ -30,39 +40,48 @@ void log(JNIEnv *env, jobject jobj, jstring str) {
 /**
  * 方法必须在这里上边定义，不然会找不到
  */
-JNINativeMethod method[] = {
+static const JNINativeMethod method[] = {
         {"showToast", "(Landroid/content/Context;)V", (void *) (showToast)},
-        {"log",       "(Ljava/lang/String;)V",        (void *) (log)}
+        {"log",       "(Ljava/lang/String;)V",        (void *) (jLog)}
 };
+
+JavaVM *javaVm = nullptr;
 
 // VM将在加载Library时调用JNI_OnLoad。它需要返回native需要的JNI版本。
 jint JNI_OnLoad(JavaVM *vm, void *reserved) {
     cout << "JNI_OnLoad" << endl;
+    ::javaVm = vm;
     JNIEnv *env = NULL;
-    if (vm->GetEnv((void **) &env, JNI_VERSION_1_2) != JNI_OK) {
-        cout << "Get env " << std::hex << JNI_VERSION_1_2 << " failed" << endl;
-        return JNI_VERSION_1_2;
+    if (vm->GetEnv((void **) &env, JNI_VERSION_1_6) != JNI_OK) {
+        cout << "Get env " << std::hex << JNI_VERSION_1_6 << " failed" << endl;
+        return JNI_VERSION_1_6;
     }
 
     jclass dynamicClass = env->FindClass("com/rzm/c/utils/JniDynamicUtils");
     if (dynamicClass == NULL) {
         cout << "find class JniDynamicUtils failed" << endl;
-        return JNI_VERSION_1_2;
+        return JNI_VERSION_1_6;
     }
     int ret = env->RegisterNatives(dynamicClass, method, sizeof(method) / sizeof(method[0]));
     if (ret != 0) {
         cout << "register natives failed, error: " << ret << endl;
     }
-    return JNI_VERSION_1_2;
+    return JNI_VERSION_1_6;
 }
 
-
+/**
+ * // 1. JavaVM全局，绑定当前进程， 只有一个地址
+// 2. JNIEnv线程绑定， 绑定主线程，绑定子线程
+// 3. jobject 谁调用JNI函数，谁的实例会给jobject
+ * @param vm
+ * @param reserved
+ */
 // 当加载Library的类被垃圾回收时，VM会调用JNI_OnUnload。
 void JNI_OnUnload(JavaVM *vm, void *reserved) {
     cout << "JNI_OnUnload" << endl;
     JNIEnv *env = NULL;
-    if (vm->GetEnv((void **) &env, JNI_VERSION_1_2) != JNI_OK) {
-        cout << "JNI_OnUnload Get env " << std::hex << JNI_VERSION_1_2 << " failed" << endl;
+    if (vm->GetEnv((void **) &env, JNI_VERSION_1_6) != JNI_OK) {
+        cout << "JNI_OnUnload Get env " << std::hex << JNI_VERSION_1_6 << " failed" << endl;
         return;
     }
     jclass dynamicClass = env->FindClass("com/rzm/c/utils/JniDynamicUtils");
@@ -403,4 +422,61 @@ JNIEXPORT jboolean JNICALL
 Java_com_rzm_c_utils_JniUtils_deleteGlobalReference(JNIEnv *env, jobject instance) {
     env->DeleteGlobalRef(jGlobalStrenv);
     return true;
+}
+
+
+class MyContext {
+public:
+    JNIEnv *env = nullptr;// 不能跨线程 ，会奔溃
+    jobject obj = nullptr;// 不能跨线程,除非提升为全局引用
+};
+
+void *myThreadAction(void *pVoid) {
+    LOGE("myThreadAction run")
+    MyContext *context = static_cast<MyContext *>(pVoid);
+    //TODO 错误的用法，env是绑定线程的，主线程的env不能传递到子线程使用
+    //jclass mainActivityClass = context->env->FindClass("com/rzm/c/ThreadActivity");
+
+    //正确的做法是：
+    //jint AttachCurrentThread(JNIEnv** p_env, void* thr_args)
+    JNIEnv *env = nullptr;
+    jint result = ::javaVm->AttachCurrentThread(&env, nullptr);
+    if (result != JNI_OK) {
+        return 0;
+    }
+    jclass threadActivityClass = env->GetObjectClass(context->obj);
+    jmethodID updateActivityUIMethodId = env->GetMethodID(threadActivityClass, "updateActivityUI",
+                                                          "()V");
+    env->CallVoidMethod(context->obj, updateActivityUIMethodId);
+
+    ::javaVm->DetachCurrentThread();
+    LOGE("myThreadAction C++ 异步线程OK")
+    //TODO 如果这里不反回nullptr，回报下面的错误并崩溃
+    //    --------- beginning of crash
+    //2022-08-26 11:05:40.810 9879-9879/? A/DEBUG:
+    // #00 pc 0000000000045814  /data/app/~~wT_U_QyX8VYKR8i0H7A2Cg==/com.rzm.c-o0vYH1mFj3hnFGwUAesfAQ
+    // ==/lib/arm64/libnative-lib.so (myThreadAction(void*)+44)
+    // (BuildId: bb8d26da41f52367c6d718a79a77b90a8fbee1dc)
+    return nullptr;
+}
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_rzm_c_ThreadActivity_nativeThread(JNIEnv *env, jobject thiz) {
+
+    MyContext *myContext = new MyContext;
+    myContext->env = env;
+    //myContext->instance = job; // 默认是局部引用，会奔溃
+    myContext->obj = env->NewGlobalRef(thiz);// 提升全局引用
+
+    pthread_t pthread;
+    //int pthread_create(pthread_t* __pthread_ptr, pthread_attr_t const* __attr, void* (*__start_routine)(void*), void*);
+    pthread_create(&pthread, nullptr, myThreadAction, myContext);
+    pthread_join(pthread, nullptr);
+    env->DeleteGlobalRef(myContext->obj);
+}
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_rzm_c_ThreadActivity_closeThread(JNIEnv *env, jobject thiz) {
+//    env->DeleteGlobalRef()
 }

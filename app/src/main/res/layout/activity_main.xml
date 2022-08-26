@@ -13,6 +13,13 @@
         tools:context="com.rzm.c.MainActivity">
 
         <Button
+            android:id="@+id/thread"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="makeThread"
+            android:text="c++线程使用" />
+
+        <Button
             android:id="@+id/sample_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -1,23 +1,20 @@
 {
   "buildFiles": [
-    "/Users/renzhenming/Library/Android/sdk/ndk/20.0.5594570/build/cmake/android.toolchain.cmake",
-    "/Users/renzhenming/Library/Android/sdk/ndk/20.0.5594570/build/cmake/platforms.cmake",
     "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/CMakeLists.txt"
   ],
   "cleanCommands": [
-    "/Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a\" clean"
+    "/Users/renzhenming/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a --target clean"
   ],
-  "buildTargetsCommand": "/Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
     "native-lib2-Debug-arm64-v8a": {
       "artifactName": "native-lib2",
-      "buildCommand": "/Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a\" native-lib2",
+      "buildCommand": "/Users/renzhenming/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a --target native-lib2",
       "abi": "arm64-v8a",
       "output": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib2.so"
     },
     "native-lib-Debug-arm64-v8a": {
       "artifactName": "native-lib",
-      "buildCommand": "/Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a\" native-lib",
+      "buildCommand": "/Users/renzhenming/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a --target native-lib",
       "abi": "arm64-v8a",
       "output": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so"
     }
