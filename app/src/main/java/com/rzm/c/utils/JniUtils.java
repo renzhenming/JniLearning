@@ -98,6 +98,11 @@ public class JniUtils {
     public native void catchException2();
 
     /**
+     * C++处理自己的异常
+     */
+    public native void catchException3();
+
+    /**
      * 局部引用
      */
     public native void localReference() ;

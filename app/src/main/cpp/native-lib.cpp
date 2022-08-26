@@ -398,6 +398,41 @@ Java_com_rzm_c_utils_JniUtils_catchException2(JNIEnv *env, jobject thiz) {
     LOGI("native层:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2");
 }
 
+void cppExceptionMethod() {
+    throw "C++内部方法发生异常了";
+}
+
+class MyOwnerException {
+public:
+    char *getInfo() {
+        return "自定义异常MyOwnerException";
+    }
+};
+
+void cppExceptionMethod2() {
+    MyOwnerException *exception;
+    throw exception;
+}
+
+/**
+ * C++代码处理自己的异常
+ */
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_rzm_c_utils_JniUtils_catchException3(JNIEnv *env, jobject thiz) {
+    try {
+        cppExceptionMethod();
+    } catch (const char *error) {
+        LOGE("Java_com_rzm_c_utils_JniUtils_catchException3 %s", error)
+    }
+
+    try {
+        cppExceptionMethod2();
+    } catch (MyOwnerException *exception) {
+        LOGE("Java_com_rzm_c_utils_JniUtils_catchException3 %s", exception->getInfo())
+    }
+}
+
 /**
  * 局部引用
  */

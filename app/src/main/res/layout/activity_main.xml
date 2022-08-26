@@ -101,6 +101,12 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="catchOwnerException"
+            android:text="C++处理自己的异常" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:onClick="localReference"
             android:text="C++局部引用" />
 

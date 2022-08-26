@@ -184,6 +184,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * C++处理自己代码的异常
+     */
+    public void catchOwnerException(View view) {
+        utils.catchException3();
+    }
+
+    /**
      * C++局部引用
      *
      * @param view
