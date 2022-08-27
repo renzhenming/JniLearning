@@ -47,7 +47,7 @@
     "buildTargetSet": []
   },
   "abi": "X86",
-  "abiPlatformVersion": 16,
+  "abiPlatformVersion": 21,
   "cxxBuildFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/x86",
   "jsonFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/x86/android_gradle_build.json",
   "gradleBuildOutputFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cxx/debug/x86",

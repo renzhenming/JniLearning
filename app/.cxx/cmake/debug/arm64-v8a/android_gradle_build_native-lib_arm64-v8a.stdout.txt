@@ -1,17 +1,1 @@
-[1/2] Building CXX object CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o
-/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/native-lib.cpp:196:18: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
-    char *temp = " what day is it today?";
-                 ^
-/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/native-lib.cpp:261:29: warning: format specifies type 'long long' but the argument has type 'jlong' (aka 'long') [-Wformat]
-    printf("时间：%lld", timeMills);
-                  ~~~~   ^~~~~~~~~
-                  %ld
-/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/native-lib.cpp:408:16: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
-        return "自定义异常MyOwnerException";
-               ^
-/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/native-lib.cpp:449:36: warning: format specifies type 'long long' but the argument has type 'jlong' (aka 'long') [-Wformat]
-        printf("aaaaaaaaa = %lld", time);
-                            ~~~~   ^~~~
-                            %ld
-4 warnings generated.
-[2/2] Linking CXX shared library ../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so
+ninja: no work to do.

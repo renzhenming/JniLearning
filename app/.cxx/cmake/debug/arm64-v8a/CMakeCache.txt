@@ -21,7 +21,7 @@ ANDROID_ABI:UNINITIALIZED=arm64-v8a
 ANDROID_NDK:UNINITIALIZED=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462
 
 //No help, variable specified on the command line.
-ANDROID_PLATFORM:UNINITIALIZED=android-16
+ANDROID_PLATFORM:UNINITIALIZED=android-21
 
 //Archiver
 CMAKE_AR:FILEPATH=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/aarch64-linux-android-ar
@@ -177,8 +177,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Path to a program.
 CMAKE_STRIP:FILEPATH=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/aarch64-linux-android-strip
 
-//The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake
+//No help, variable specified on the command line.
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -195,11 +195,8 @@ Project_SOURCE_DIR:STATIC=/Users/renzhenming/AndroidStudioProjects/JniLearning/a
 //Path to a library.
 log-lib:FILEPATH=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so
 
-//Dependencies for target
-native-lib2_LIB_DEPENDS:STATIC=
-
 //Dependencies for the target
-native-lib_LIB_DEPENDS:STATIC=general;native-lib2;general;/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so;
+native-lib_LIB_DEPENDS:STATIC=general;/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so;
 
 
 ########################

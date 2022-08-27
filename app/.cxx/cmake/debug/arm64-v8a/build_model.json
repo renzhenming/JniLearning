@@ -5,7 +5,6 @@
       "sdkFolder": "/Users/renzhenming/Library/Android/sdk",
       "isNativeCompilerSettingsCacheEnabled": false,
       "isBuildOnlyTargetAbiEnabled": true,
-      "ideBuildTargetAbi": "arm64-v8a",
       "splitsAbiFilterSet": [],
       "intermediatesFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates",
       "gradleModulePathName": ":app",
@@ -40,12 +39,15 @@
     "gradleBuildOutputFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cxx/debug",
     "isDebuggableEnabled": true,
     "validAbiList": [
-      "ARM64_V8A"
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
     ],
     "buildTargetSet": []
   },
   "abi": "ARM64_V8A",
-  "abiPlatformVersion": 16,
+  "abiPlatformVersion": 21,
   "cxxBuildFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a",
   "jsonFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a/android_gradle_build.json",
   "gradleBuildOutputFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cxx/debug/arm64-v8a",

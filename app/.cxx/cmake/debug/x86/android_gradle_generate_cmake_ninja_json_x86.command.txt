@@ -3,7 +3,7 @@ arguments :
 -H/Users/renzhenming/AndroidStudioProjects/JniLearning/app
 -B/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/x86
 -DANDROID_ABI=x86
--DANDROID_PLATFORM=android-16
+-DANDROID_PLATFORM=android-21
 -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/x86
 -DCMAKE_BUILD_TYPE=Debug
 -DANDROID_NDK=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462

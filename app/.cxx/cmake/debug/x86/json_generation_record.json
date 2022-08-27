@@ -1,7 +1,7 @@
 [
   {
     "level": "INFO",
-    "message": "Start JSON generation. Platform version: 16 min SDK version: x86"
+    "message": "Start JSON generation. Platform version: 21 min SDK version: x86"
   },
   {
     "level": "INFO",
@@ -29,23 +29,23 @@
   },
   {
     "level": "INFO",
-    "message": "- force flag, will remove stale json folder"
+    "message": "- a dependent build file changed"
   },
   {
     "level": "INFO",
-    "message": "removing stale contents from \u0027/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/x86\u0027"
+    "message": "  - /Users/renzhenming/AndroidStudioProjects/JniLearning/app/CMakeLists.txt"
   },
   {
     "level": "INFO",
-    "message": "created folder \u0027/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/x86\u0027"
+    "message": "keeping json folder \u0027/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/x86\u0027 but regenerating project"
   },
   {
     "level": "INFO",
-    "message": "executing cmake Executable : /Users/renzhenming/Library/Android/sdk/cmake/3.6.4111459/bin/cmake\narguments : \n-H/Users/renzhenming/AndroidStudioProjects/JniLearning/app\n-B/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/x86\n-DANDROID_ABI\u003dx86\n-DANDROID_PLATFORM\u003dandroid-16\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/x86\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DANDROID_NDK\u003d/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462\n-DCMAKE_TOOLCHAIN_FILE\u003d/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake\n-DCMAKE_MAKE_PROGRAM\u003d/Users/renzhenming/Library/Android/sdk/cmake/3.6.4111459/bin/ninja\n-GAndroid Gradle - Ninja\njvmArgs : \n\n"
+    "message": "executing cmake Executable : /Users/renzhenming/Library/Android/sdk/cmake/3.6.4111459/bin/cmake\narguments : \n-H/Users/renzhenming/AndroidStudioProjects/JniLearning/app\n-B/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/x86\n-DANDROID_ABI\u003dx86\n-DANDROID_PLATFORM\u003dandroid-21\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/x86\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DANDROID_NDK\u003d/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462\n-DCMAKE_TOOLCHAIN_FILE\u003d/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake\n-DCMAKE_MAKE_PROGRAM\u003d/Users/renzhenming/Library/Android/sdk/cmake/3.6.4111459/bin/ninja\n-GAndroid Gradle - Ninja\njvmArgs : \n\n"
   },
   {
     "level": "INFO",
-    "message": "Executable : /Users/renzhenming/Library/Android/sdk/cmake/3.6.4111459/bin/cmake\narguments : \n-H/Users/renzhenming/AndroidStudioProjects/JniLearning/app\n-B/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/x86\n-DANDROID_ABI\u003dx86\n-DANDROID_PLATFORM\u003dandroid-16\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/x86\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DANDROID_NDK\u003d/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462\n-DCMAKE_TOOLCHAIN_FILE\u003d/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake\n-DCMAKE_MAKE_PROGRAM\u003d/Users/renzhenming/Library/Android/sdk/cmake/3.6.4111459/bin/ninja\n-GAndroid Gradle - Ninja\njvmArgs : \n\n"
+    "message": "Executable : /Users/renzhenming/Library/Android/sdk/cmake/3.6.4111459/bin/cmake\narguments : \n-H/Users/renzhenming/AndroidStudioProjects/JniLearning/app\n-B/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/x86\n-DANDROID_ABI\u003dx86\n-DANDROID_PLATFORM\u003dandroid-21\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/x86\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DANDROID_NDK\u003d/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462\n-DCMAKE_TOOLCHAIN_FILE\u003d/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake\n-DCMAKE_MAKE_PROGRAM\u003d/Users/renzhenming/Library/Android/sdk/cmake/3.6.4111459/bin/ninja\n-GAndroid Gradle - Ninja\njvmArgs : \n\n"
   },
   {
     "level": "INFO",
