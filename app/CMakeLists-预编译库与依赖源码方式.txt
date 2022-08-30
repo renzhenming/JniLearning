@@ -1,0 +1,81 @@
+cmake_minimum_required(VERSION 3.10.2)
+project("ndk28_cmake")
+# 批量导入 cpp c源文件
+file(GLOB SOURCE ${CMAKE_SOURCE_DIR}/cpp/*.cpp ${CMAKE_SOURCE_DIR}/cpp/*.c)
+# 添加一个库(动态库SHARED，静态库STATIC) add_library(native-lib # 库的名字 ---> libnative-lib.so
+SHARED # 动态库
+# cpp的源文件:把cpp源文件编译成 libnative-lib.so 库
+${SOURCE}
+)
+# TODO >>>>>>>>>>>>>>>>>>>>>>>> 预编译库(已经有了 xxx.so / xxx.a)的导入方式 # TODO 方式一:推荐的方式
+#[[
+# 第一步:导入fmod头文件
+include_directories("${CMAKE_SOURCE_DIR}/cpp/inc")
+# 第二步:导入库文件 (方式一)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} - L${CMAKE_SOURCE_DIR}/jniLibsaaa/${CMAKE_ANDROID_ARCH_ABI}") # 第三步链接到总库中去
+target_link_libraries( # native-lib是我们的总库
+native-lib # 被链接的总库
+log # 自动寻找 # 具体的库 链接到 libnative-lib.so里面去 fmod # 具体的库 链接到 libnative-lib.so里面去
+fmodL # 具体的库 链接到 libnative-lib.so里面去
+)
+]]
+# TODO 方式二:以前更多使用的方式，老程序员使用的方式
+#[[
+# 第一步:导入fmod头文件 include_directories("${CMAKE_SOURCE_DIR}/cpp/inc") # 第二步:导入库文件 (方式二)
+add_library(fmod SHARED IMPORTED)
+set_target_properties(fmod PROPERTIES
+        IMPORTED_LOCATION
+${CMAKE_SOURCE_DIR}/jniLibsaaa/${CMAKE_ANDROID_ARCH_ABI}/libfmod.so)
+add_library(fmodL SHARED IMPORTED)
+set_target_properties(fmodL PROPERTIES
+        IMPORTED_LOCATION
+${CMAKE_SOURCE_DIR}/jniLibsaaa/${CMAKE_ANDROID_ARCH_ABI}/libfmodL.so)
+# 第三步链接到总库中去
+target_link_libraries( # native-lib是我们的总库
+native-lib # 被链接的总库
+log # 自动寻找 # 具体的库 链接到 libnative-lib.so里面去 fmod # 具体的库 链接到 libnative-lib.so里面去
+fmodL # 具体的库 链接到 libnative-lib.so里面去
+)
+]]
+# TODO >>>>>>>>>>>>>>>>>>>>>>>> 判断静态库还是动态库 (静态库会直接Copy到总库，动态库则不 会)
+#[[
+# >>>>>>>>>>> 下面代码不参与 判断 start
+# 第一步:导入fmod头文件 include_directories("${CMAKE_SOURCE_DIR}/cpp/inc") # 第二步:导入库文件 (方式二)
+add_library(fmod SHARED IMPORTED) set_target_properties(fmod PROPERTIES
+        IMPORTED_LOCATION
+${CMAKE_SOURCE_DIR}/jniLibsaaa/${CMAKE_ANDROID_ARCH_ABI}/libfmod.so)
+add_library(fmodL SHARED IMPORTED)
+set_target_properties(fmodL PROPERTIES
+IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/jniLibsaaa/${CMAKE_ANDROID_ARCH_ABI}/libfmodL.so) # >>>>>>>>>>> 上面代码不参与 判断 end
+## OFF=0=false    ON=1=true
+# set(isSTATIC OFF)
+set(isSTATIC ON)
+if(${isSTATIC}) # 导入静态库
+    add_library(getndk STATIC IMPORTED)
+# 开始真正导入 静态库 System.loadLibrary("getndk"); // 如果是动态库，这里需要加 载，否则注释
+    set_target_properties(getndk PROPERTIES IMPORTED_LOCATION
+${CMAKE_SOURCE_DIR}/cpp/libgetndk.a)
+    message("isSTATIC == static")
+else(${isSTATIC})
+# 导入动态库
+add_library(getndk SHARED IMPORTED)
+# 开始真正导入 动态库 System.loadLibrary("getndk"); // 如果是动态库，这里需要加载，
+否则注释
+    set_target_properties(getndk PROPERTIES
+            IMPORTED_LOCATION
+${CMAKE_SOURCE_DIR}/jniLibsaaa/${CMAKE_ANDROID_ARCH_ABI}/libgetndk.so)
+    message("isSTATIC == shared")
+endif(${isSTATIC})
+target_link_libraries( # native-lib是我们的总库 native-lib # 被链接的总库
+log # 自动寻找 # 具体的库 链接到 libnative-lib.so里面去
+getndk # TODO 具体的库 链接到 libnative-lib.so里面去【这个库，有可能是静态库，有 可能是动态库】
+fmod # 具体的库 链接到 libnative-lib.so里面去 fmodL # 具体的库 链接到 libnative-lib.so里面去 )
+]]
+# rtmp的时候，就全盘采用 源码构建方式
+# TODO >>>>>>>>>>>>>>>>>>>>>>>> 依赖源码的方式(已经有了 xxxc / xxx.c / xxx.c ...)的 导入方式
+#引入get子目录下的CMakeLists.txt add_subdirectory(${CMAKE_SOURCE_DIR}/cpp/libget)
+#引入count子目录下的CMakeLists.txt add_subdirectory(${CMAKE_SOURCE_DIR}/cpp/libcount)
+target_link_libraries( # native-lib是我们的总库 native-lib # 被链接的总库
+log # 自动寻找 # 具体的库 链接到 libnative-lib.so里面去 get # 具体的库 链接到 libnative-lib.so里面去
+count # 具体的库 链接到 libnative-lib.so里面去
+)

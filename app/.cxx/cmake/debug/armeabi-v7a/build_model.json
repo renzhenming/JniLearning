@@ -47,7 +47,7 @@
     "buildTargetSet": []
   },
   "abi": "ARMEABI_V7A",
-  "abiPlatformVersion": 16,
+  "abiPlatformVersion": 21,
   "cxxBuildFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a",
   "jsonFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a/android_gradle_build.json",
   "gradleBuildOutputFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cxx/debug/armeabi-v7a",

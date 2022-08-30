@@ -1,0 +1,44 @@
+# 最低支持的版本，注意:这里并不能代表最终的版本，最终版本在app.build.gradle中设置的 cmake_minimum_required(VERSION 3.10.2)
+# 当前工程名，以前的旧版本，是没有设置的，这个可以设置，也可以不设置 project("ndk28_cmake")
+# 批量导入 cpp c源文件
+# file 可以定义一个变量 SOURCE， GLOB(使用GLOB从源树中收集源文件列表，就可以开心的 *.cpp *.c *.h)
+# https://www.imooc.com/wenda/detail/576408
+file(GLOB SOURCE *.cpp *.c)
+# 添加一个库(动态库SHARED，静态库STATIC) add_library(native-lib # 库的名字 ---> libnative-lib.so
+SHARED # 动态库
+# cpp的源文件:把cpp源文件编译成 libnative-lib.so 库
+${SOURCE}
+# 查找一个 NDK工具中的 动态库(liblog.so)
+# 思考:我如何知道 哪些库是可以写的，你怎么知道些一个log就可以?
+# 答:请查看 D:\Android\Sdk\ndk\21.4.7075529\build\cmake\system_libs.cmake
+# 思考:D:\Android\Sdk\ndk\21.0.6113669\toolchains\llvm\prebuilt\windows- x86_64\sysroot\usr\lib\arm-linux-androideabi\16\liblog.so
+# 答:你怎么知道是在 21.4.7075529?，arm-linux-androideabi?，16?
+# 答:?1(因为local.properties知道了NDK版本，或者是你当前的NDK版本)
+# 答:?2(因为我的手机是arm32的 所以 == arm-linux-androideabi 而且还我运行过) # 答:?3(因为 minSdkVersion 16)
+find_library(log-lib
+log )
+# native-lib是我们的总库，也就是我们在 apk/lib/libnative-lib.so
+# 然后 把log库链接到 总库中去，总库的cpp代码就可以使用 android/log.h的库实现代码了 target_link_libraries(native-lib # 被链接的总库
+${log-lib} # 链接的具体库 # getndk
+)
+# log 信息输出的查看
+# 以前的Cmake版本都是在output.txt, 现在最新版本Cmake在metadata_generation_stderr.txt或 cmake_server_log，害我寻找了半天
+# 想及时更新你的日志，请安装一次即可 or Linked_C++_Projects
+# 在Build也可以查看，注意:是点击Sync Now 才会看到
+#[[
+(无) = 重要消息;
+STATUS = 非重要消息;
+WARNING = CMake 警告, 会继续执行;
+AUTHOR_WARNING = CMake 警告 (dev), 会继续执行; SEND_ERROR = CMake 错误, 继续执行，但是会跳过生成的步骤; FATAL_ERROR = CMake 错误, 终止所有处理过程;
+]]
+message(STATUS "1DerrySuccessD>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+message(STATUS "2DerrySuccessD>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+message(STATUS "3DerrySuccessD>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+message(STATUS "4DerrySuccessD>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+message(STATUS "5DerrySuccessD>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+message(STATUS "6DerrySuccessD>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+message(STATUS "7DerrySuccessD>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+message(STATUS "8DerrySuccessD>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+message(STATUS "9DerrySuccessD>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+message(STATUS "0DerrySuccessD>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+message("10 OldCmakeVersion:output.txt, NewCmakeVersion:cmake_server_log.txt")
