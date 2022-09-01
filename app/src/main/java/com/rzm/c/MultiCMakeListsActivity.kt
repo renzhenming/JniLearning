@@ -14,5 +14,11 @@ class MultiCMakeListsActivity : AppCompatActivity() {
         invokeStaticNative()
     }
 
-    private external fun invokeStaticNative();
+
+    fun invokeShared(view: View) {
+        invokeSharedNative()
+    }
+
+    private external fun invokeStaticNative()
+    private external fun invokeSharedNative()
 }

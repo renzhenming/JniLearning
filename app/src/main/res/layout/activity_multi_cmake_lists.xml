@@ -3,8 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".MultiCMakeListsActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:text="一个大型项目，不会把所有的cmake配置写在一个文件中，而是使用多个CmakeLists文件配置,这样也会更灵活。\n,那么怎么做呢，就是通过add_subdirectory添加子文件的路径，实现链接"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="invokeShared"
+        android:text="调用动态库方法" />
 
     <Button
         android:layout_width="match_parent"

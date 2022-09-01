@@ -4,3 +4,6 @@
 /Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a/cpp/libget/CMakeFiles/rebuild_cache.dir
 /Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a/cpp/libget/CMakeFiles/edit_cache.dir
 /Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a/cpp/libget/CMakeFiles/get.dir
+/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a/cpp/libcount/CMakeFiles/rebuild_cache.dir
+/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a/cpp/libcount/CMakeFiles/edit_cache.dir
+/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a/cpp/libcount/CMakeFiles/count.dir

@@ -55,7 +55,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 #############################################
 # Order-only phony target for native-lib
 
-build cmake_object_order_depends_target_native-lib: phony || cmake_object_order_depends_target_get
+build cmake_object_order_depends_target_native-lib: phony || cmake_object_order_depends_target_count cmake_object_order_depends_target_get
 build CMakeFiles/native-lib.dir/cpp/MyParcel.cpp.o: CXX_COMPILER__native-lib /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/MyParcel.cpp || cmake_object_order_depends_target_native-lib
   DEFINES = -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles/native-lib.dir/cpp/MyParcel.cpp.o.d
@@ -94,10 +94,10 @@ build CMakeFiles/native-lib.dir/cpp/parcel-lib.cpp.o: CXX_COMPILER__native-lib /
 #############################################
 # Link the shared library /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so
 
-build /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so: CXX_SHARED_LIBRARY_LINKER__native-lib CMakeFiles/native-lib.dir/cpp/MyParcel.cpp.o CMakeFiles/native-lib.dir/cpp/cmake-lib.cpp.o CMakeFiles/native-lib.dir/cpp/native-lib.cpp.o CMakeFiles/native-lib.dir/cpp/native-lib2.cpp.o CMakeFiles/native-lib.dir/cpp/parcel-lib.cpp.o | /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libget.so /Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so || /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libget.so
+build /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so: CXX_SHARED_LIBRARY_LINKER__native-lib CMakeFiles/native-lib.dir/cpp/MyParcel.cpp.o CMakeFiles/native-lib.dir/cpp/cmake-lib.cpp.o CMakeFiles/native-lib.dir/cpp/native-lib.cpp.o CMakeFiles/native-lib.dir/cpp/native-lib2.cpp.o CMakeFiles/native-lib.dir/cpp/parcel-lib.cpp.o | /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libget.so cpp/libcount/libcount.a /Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so || /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libget.so cpp/libcount/libcount.a
   LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O0 -fno-limit-debug-info
   LINK_FLAGS = -Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments
-  LINK_LIBRARIES = /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libget.so -llog -latomic -lm
+  LINK_LIBRARIES = /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libget.so cpp/libcount/libcount.a -llog -latomic -lm
   OBJECT_DIR = CMakeFiles/native-lib.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -175,9 +175,78 @@ build /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediat
   TARGET_FILE = /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libget.so
   TARGET_PDB = get.so.dbg
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build cpp/libcount/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a/cpp/libcount && /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake -H/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main -B/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+build cpp/libcount/rebuild_cache: phony cpp/libcount/CMakeFiles/rebuild_cache.util
+
+#############################################
+# Utility command for edit_cache
+
+build cpp/libcount/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a/cpp/libcount && /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+build cpp/libcount/edit_cache: phony cpp/libcount/CMakeFiles/edit_cache.util
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target count
+
+
+#############################################
+# Order-only phony target for count
+
+build cmake_object_order_depends_target_count: phony
+build cpp/libcount/CMakeFiles/count.dir/add.cpp.o: CXX_COMPILER__count /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/libcount/add.cpp || cmake_object_order_depends_target_count
+  DEP_FILE = cpp/libcount/CMakeFiles/count.dir/add.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC
+  OBJECT_DIR = cpp/libcount/CMakeFiles/count.dir
+  OBJECT_FILE_DIR = cpp/libcount/CMakeFiles/count.dir
+build cpp/libcount/CMakeFiles/count.dir/div.cpp.o: CXX_COMPILER__count /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/libcount/div.cpp || cmake_object_order_depends_target_count
+  DEP_FILE = cpp/libcount/CMakeFiles/count.dir/div.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC
+  OBJECT_DIR = cpp/libcount/CMakeFiles/count.dir
+  OBJECT_FILE_DIR = cpp/libcount/CMakeFiles/count.dir
+build cpp/libcount/CMakeFiles/count.dir/mul.cpp.o: CXX_COMPILER__count /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/libcount/mul.cpp || cmake_object_order_depends_target_count
+  DEP_FILE = cpp/libcount/CMakeFiles/count.dir/mul.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC
+  OBJECT_DIR = cpp/libcount/CMakeFiles/count.dir
+  OBJECT_FILE_DIR = cpp/libcount/CMakeFiles/count.dir
+build cpp/libcount/CMakeFiles/count.dir/sub.cpp.o: CXX_COMPILER__count /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/libcount/sub.cpp || cmake_object_order_depends_target_count
+  DEP_FILE = cpp/libcount/CMakeFiles/count.dir/sub.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC
+  OBJECT_DIR = cpp/libcount/CMakeFiles/count.dir
+  OBJECT_FILE_DIR = cpp/libcount/CMakeFiles/count.dir
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target count
+
+
+#############################################
+# Link the static library cpp/libcount/libcount.a
+
+build cpp/libcount/libcount.a: CXX_STATIC_LIBRARY_LINKER__count cpp/libcount/CMakeFiles/count.dir/add.cpp.o cpp/libcount/CMakeFiles/count.dir/div.cpp.o cpp/libcount/CMakeFiles/count.dir/mul.cpp.o cpp/libcount/CMakeFiles/count.dir/sub.cpp.o
+  LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O0 -fno-limit-debug-info
+  OBJECT_DIR = cpp/libcount/CMakeFiles/count.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = cpp/libcount/libcount.a
+  TARGET_PDB = count.a.dbg
+# =============================================================================
 # Target aliases.
 
+build count: phony cpp/libcount/libcount.a
 build get: phony /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libget.so
+build libcount.a: phony cpp/libcount/libcount.a
 build libget.so: phony /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libget.so
 build libnative-lib.so: phony /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so
 build native-lib: phony /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so
@@ -185,6 +254,12 @@ build native-lib: phony /Users/renzhenming/AndroidStudioProjects/JniLearning/app
 # Folder targets.
 
 # =============================================================================
+# =============================================================================
+
+#############################################
+# Folder: /Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a/cpp/libcount
+
+build  cpp/libcount/all: phony count
 # =============================================================================
 
 #############################################
@@ -198,7 +273,7 @@ build  cpp/libget/all: phony get
 #############################################
 # The main all target.
 
-build all: phony /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libget.so
+build all: phony /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libget.so cpp/libcount/libcount.a
 
 #############################################
 # Make the all target the default.
@@ -208,13 +283,13 @@ default all
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/CMakeLists.txt /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/libget/CMakeLists.txt /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompilerABI.c /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCCompiler.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCXXCompiler.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystem.cmake.in /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCCompiler.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCXXCompiler.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-C.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-CXX.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake /Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake /Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/build/cmake/platforms.cmake CMakeCache.txt CMakeFiles/3.10.2/CMakeCCompiler.cmake CMakeFiles/3.10.2/CMakeCXXCompiler.cmake CMakeFiles/3.10.2/CMakeSystem.cmake CMakeFiles/feature_tests.c CMakeFiles/feature_tests.cxx
+build build.ninja: RERUN_CMAKE | /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/CMakeLists.txt /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/libcount/CMakeLists.txt /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/libget/CMakeLists.txt /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake /Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake /Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/build/cmake/platforms.cmake CMakeCache.txt CMakeFiles/3.10.2/CMakeCCompiler.cmake CMakeFiles/3.10.2/CMakeCXXCompiler.cmake CMakeFiles/3.10.2/CMakeSystem.cmake
   pool = console
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/CMakeLists.txt /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/libget/CMakeLists.txt /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompilerABI.c /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCCompiler.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCXXCompiler.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystem.cmake.in /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCCompiler.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCXXCompiler.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-C.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-CXX.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake /Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake /Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/build/cmake/platforms.cmake CMakeCache.txt CMakeFiles/3.10.2/CMakeCCompiler.cmake CMakeFiles/3.10.2/CMakeCXXCompiler.cmake CMakeFiles/3.10.2/CMakeSystem.cmake CMakeFiles/feature_tests.c CMakeFiles/feature_tests.cxx: phony
+build /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/CMakeLists.txt /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/libcount/CMakeLists.txt /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/libget/CMakeLists.txt /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake /Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake /Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/build/cmake/platforms.cmake CMakeCache.txt CMakeFiles/3.10.2/CMakeCCompiler.cmake CMakeFiles/3.10.2/CMakeCXXCompiler.cmake CMakeFiles/3.10.2/CMakeSystem.cmake: phony
 
 #############################################
 # Clean all the built files.

@@ -5,7 +5,6 @@
       "sdkFolder": "/Users/renzhenming/Library/Android/sdk",
       "isNativeCompilerSettingsCacheEnabled": false,
       "isBuildOnlyTargetAbiEnabled": true,
-      "ideBuildTargetAbi": "arm64-v8a",
       "splitsAbiFilterSet": [],
       "intermediatesFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates",
       "gradleModulePathName": ":app",
