@@ -10,7 +10,7 @@
       "intermediatesFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates",
       "gradleModulePathName": ":app",
       "moduleRootFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app",
-      "makeFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/CMakeLists.txt",
+      "makeFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/CMakeLists.txt",
       "buildSystem": "CMAKE",
       "compilerSettingsCacheFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/.cxx",
       "cxxFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx",

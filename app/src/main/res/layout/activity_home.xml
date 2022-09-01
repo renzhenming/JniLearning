@@ -21,6 +21,12 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="goCmakePage"
+            android:text="CMake相关知识点" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:onClick="parcel"
             android:text="仿写Android Parcel" />
     </LinearLayout>

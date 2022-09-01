@@ -39,10 +39,7 @@
     "gradleBuildOutputFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cxx/debug",
     "isDebuggableEnabled": true,
     "validAbiList": [
-      "ARMEABI_V7A",
-      "ARM64_V8A",
-      "X86",
-      "X86_64"
+      "ARMEABI_V7A"
     ],
     "buildTargetSet": []
   },

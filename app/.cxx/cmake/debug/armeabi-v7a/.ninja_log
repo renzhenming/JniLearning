@@ -1,6 +1,0 @@
-# ninja log v5
-5	119	0	CMakeFiles/native-lib.dir/src/main/cpp/MyParcel.cpp.o	fb5d94ed7d0109e
-3	462	0	CMakeFiles/native-lib.dir/src/main/cpp/parcel-lib.cpp.o	e1aed0929f07f40d
-2	484	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib2.cpp.o	4308d61603090762
-0	539	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	52c9bbbdf86813a8
-539	659	0	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	da3e97875debc2a9

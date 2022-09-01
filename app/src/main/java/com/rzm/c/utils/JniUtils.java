@@ -3,9 +3,6 @@ package com.rzm.c.utils;
 import android.content.Context;
 import android.util.Log;
 
-import com.rzm.c.JavaInstance;
-import com.rzm.c.MainActivity;
-
 /**
  * Created by renzm on 2019/11/22.
  */

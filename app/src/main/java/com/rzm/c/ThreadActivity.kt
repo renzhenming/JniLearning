@@ -34,12 +34,12 @@ class ThreadActivity : AppCompatActivity() {
                 .show();
         } else {
             // TODO C++ 用异步线程调用到此函数 ----> 异步线程
-            Log.d("", "updateActivityUI 所属于子线程，只能打印日志了..");
+            Log.d("", "updateActivityUI 子线程，只能打印日志了..");
             runOnUiThread {
                 // 哪怕是异步线程 UI操作 正常下去 runOn @Override
                 // 可以在子线程里面 操作UI
                 AlertDialog.Builder(ThreadActivity@ this)
-                    .setTitle("updateActivityUI").setMessage("所属于子线程，只能打印日志了..")
+                    .setTitle("updateActivityUI").setMessage("子线程，只能打印日志了..")
                     .setPositiveButton("确定", null)
                     .show();
             }

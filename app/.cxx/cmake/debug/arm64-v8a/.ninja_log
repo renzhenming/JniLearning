@@ -1,11 +1,13 @@
 # ninja log v5
-5	73	0	CMakeFiles/native-lib.dir/src/main/cpp/MyParcel.cpp.o	8ff82bf6aa19df7a
-3	488	0	CMakeFiles/native-lib.dir/src/main/cpp/parcel-lib.cpp.o	fc7dc563fc860bed
-2	522	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib2.cpp.o	d1115d19c6d3cd91
-0	564	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	8dd9ffb4dc470824
-1	342	0	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	25af9b92508358ee
-1	338	0	CMakeFiles/native-lib.dir/src/main/cpp/MyParcel.cpp.o	8ff82bf6aa19df7a
-338	577	0	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	25af9b92508358ee
-3	326	0	CMakeFiles/native-lib.dir/src/main/cpp/MyParcel.cpp.o	8ff82bf6aa19df7a
-1	614	0	CMakeFiles/native-lib.dir/src/main/cpp/parcel-lib.cpp.o	fc7dc563fc860bed
-614	877	0	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	25af9b92508358ee
+1	186	1661997889	cpp/libget/CMakeFiles/get.dir/get1.c.o	e7ade8d2a9c0e370
+1	186	1661997889	cpp/libget/CMakeFiles/get.dir/get2.c.o	b5b30708c1c6f577
+1	187	1661997889	cpp/libget/CMakeFiles/get.dir/get3.c.o	bad0a26b7987da85
+187	248	1661997889	/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libget.so	3fb70bc9134a2e02
+0	308	1661997889	CMakeFiles/native-lib.dir/cpp/MyParcel.cpp.o	99c22a6a771693c2
+1	607	1661997889	CMakeFiles/native-lib.dir/cpp/parcel-lib.cpp.o	332afdb9cfb84418
+0	608	1661997889	CMakeFiles/native-lib.dir/cpp/cmake-lib.cpp.o	5fb89f47ed17567c
+1	640	1661997889	CMakeFiles/native-lib.dir/cpp/native-lib2.cpp.o	2cc8bfa6a6e320ce
+0	684	1661997889	CMakeFiles/native-lib.dir/cpp/native-lib.cpp.o	a5c73e83121a81d3
+684	933	1661997890	/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	cf4c0e4889730b10
+1	7376	1661998180	CMakeFiles/native-lib.dir/cpp/cmake-lib.cpp.o	5fb89f47ed17567c
+7376	7800	1661998180	/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	cf4c0e4889730b10

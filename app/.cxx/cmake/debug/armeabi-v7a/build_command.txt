@@ -1,4 +1,4 @@
-Executable : /Users/renzhenming/Library/Android/sdk/cmake/3.6.4111459/bin/cmake
+Executable : /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake
 arguments : 
 -H/Users/renzhenming/AndroidStudioProjects/JniLearning/app
 -B/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a
@@ -7,8 +7,13 @@ arguments :
 -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/armeabi-v7a
 -DCMAKE_BUILD_TYPE=Debug
 -DANDROID_NDK=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a
+-DCMAKE_SYSTEM_VERSION=21
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_ANDROID_NDK=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462
 -DCMAKE_TOOLCHAIN_FILE=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake
--DCMAKE_MAKE_PROGRAM=/Users/renzhenming/Library/Android/sdk/cmake/3.6.4111459/bin/ninja
--GAndroid Gradle - Ninja
+-G Ninja
+-DCMAKE_MAKE_PROGRAM=/Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja
 jvmArgs : 
 
