@@ -7,6 +7,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_ffmpeg.xml" value="0.10891590678824721" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_multi_cmake_lists.xml" value="0.1" />

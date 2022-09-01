@@ -1,0 +1,17 @@
+# ninja log v5
+3	1165	1662016330	cpp/libget/CMakeFiles/get.dir/get3.c.o	680c4a8e5d3da724
+2	1167	1662016330	cpp/libget/CMakeFiles/get.dir/get2.c.o	ef0e3227455707b9
+2	1168	1662016330	cpp/libget/CMakeFiles/get.dir/get1.c.o	9096e596c84de802
+4	1361	1662016330	cpp/libcount/CMakeFiles/count.dir/add.cpp.o	baad717501f0d6b
+1	1399	1662016330	CMakeFiles/native-lib.dir/cpp/MyParcel.cpp.o	b986bb3547bfe6b0
+1166	1836	1662016331	cpp/libcount/CMakeFiles/count.dir/div.cpp.o	20afe455ec03295f
+1168	1840	1662016331	/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libget.so	2d22ff2dd5a8a70
+1167	1895	1662016331	cpp/libcount/CMakeFiles/count.dir/mul.cpp.o	9d9c04a2e2c77535
+1361	1986	1662016331	cpp/libcount/CMakeFiles/count.dir/sub.cpp.o	5f662b517d719e5d
+1	2332	1662016331	CMakeFiles/native-lib.dir/cpp/ffmpeg-lib.cpp.o	cfd4101fb8487885
+1	2429	1662016331	CMakeFiles/native-lib.dir/cpp/cmake-lib.cpp.o	23be4521a94e0c8d
+2	2485	1662016331	CMakeFiles/native-lib.dir/cpp/parcel-lib.cpp.o	b259c742b1c89196
+2	2486	1662016331	CMakeFiles/native-lib.dir/cpp/native-lib2.cpp.o	63346007a1085339
+1	2617	1662016332	CMakeFiles/native-lib.dir/cpp/native-lib.cpp.o	643196a9128ad645
+1986	5424	1662016334	cpp/libcount/libcount.a	ef38465acba7eb84
+5426	5818	1662016335	/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	68d5a50d3e748307

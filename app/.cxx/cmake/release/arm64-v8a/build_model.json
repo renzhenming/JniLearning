@@ -1,0 +1,67 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning",
+      "sdkFolder": "/Users/renzhenming/Library/Android/sdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates",
+      "gradleModulePathName": ":app",
+      "moduleRootFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app",
+      "makeFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "compilerSettingsCacheFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/.cxx",
+      "cxxFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx",
+      "ndkFolder": "/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462",
+      "ndkVersion": "21.1.6352462",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [],
+    "cFlagList": [],
+    "cppFlagsList": [],
+    "variantName": "release",
+    "soFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/release/lib",
+    "objFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/release/obj",
+    "jsonFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/release",
+    "gradleBuildOutputFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cxx/release",
+    "isDebuggableEnabled": false,
+    "validAbiList": [
+      "ARM64_V8A"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "ARM64_V8A",
+  "abiPlatformVersion": 21,
+  "cxxBuildFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/release/arm64-v8a",
+  "jsonFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/release/arm64-v8a/android_gradle_build.json",
+  "gradleBuildOutputFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cxx/release/arm64-v8a",
+  "objFolder": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/release/obj/arm64-v8a",
+  "buildCommandFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/release/arm64-v8a/build_command.txt",
+  "buildOutputFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/release/arm64-v8a/build_output.txt",
+  "modelOutputFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/release/arm64-v8a/build_model.json",
+  "cmake": {
+    "cmakeListsWrapperFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cxx/release/arm64-v8a/CMakeLists.txt",
+    "toolchainWrapperFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cxx/release/arm64-v8a/android_gradle_build.toolchain.cmake",
+    "buildGenerationStateFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cxx/release/arm64-v8a/build_generation_state.json",
+    "cacheKeyFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cxx/release/arm64-v8a/compiler_cache_key.json",
+    "compilerCacheUseFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cxx/release/arm64-v8a/compiler_cache_use.json",
+    "compilerCacheWriteFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cxx/release/arm64-v8a/compiler_cache_write.json",
+    "toolchainSettingsFromCacheFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cxx/release/arm64-v8a/compiler_settings_cache.cmake",
+    "cmakeWrappingBaseFolder": "."
+  },
+  "jsonGenerationLoggingRecordFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/release/arm64-v8a/json_generation_record.json",
+  "compileCommandsJsonFile": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/release/arm64-v8a/compile_commands.json"
+}

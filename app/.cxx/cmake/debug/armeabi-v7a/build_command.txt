@@ -1,6 +1,6 @@
 Executable : /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake
 arguments : 
--H/Users/renzhenming/AndroidStudioProjects/JniLearning/app
+-H/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main
 -B/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a
 -DANDROID_ABI=armeabi-v7a
 -DANDROID_PLATFORM=android-21

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".FFmpegActivity"
+            android:exported="false" />
+        <activity
             android:name=".MultiCMakeListsActivity"
             android:exported="false" />
         <activity

@@ -27,6 +27,10 @@ class HomeActivity : AppCompatActivity() {
         startActivity(Intent(applicationContext, ParcelActivity::class.java))
     }
 
+    fun goFFmpegPage(view: View) {
+        startActivity(Intent(applicationContext, FFmpegActivity::class.java))
+    }
+
     fun goCmakePage(view: View) {
         startActivity(Intent(applicationContext, MultiCMakeListsActivity::class.java))
     }

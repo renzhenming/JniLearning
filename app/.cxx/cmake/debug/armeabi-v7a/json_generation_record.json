@@ -21,43 +21,7 @@
   },
   {
     "level": "INFO",
-    "message": "rebuilding JSON /Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a/android_gradle_build.json due to:"
-  },
-  {
-    "level": "INFO",
-    "message": "- command changed from previous, will remove stale json folder"
-  },
-  {
-    "level": "INFO",
-    "message": "- a dependent build file changed"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /Users/renzhenming/AndroidStudioProjects/JniLearning/app/CMakeLists.txt"
-  },
-  {
-    "level": "INFO",
-    "message": "removing stale contents from \u0027/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a\u0027"
-  },
-  {
-    "level": "INFO",
-    "message": "created folder \u0027/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a\u0027"
-  },
-  {
-    "level": "INFO",
-    "message": "executing cmake Executable : /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake\narguments : \n-H/Users/renzhenming/AndroidStudioProjects/JniLearning/app\n-B/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a\n-DANDROID_ABI\u003darmeabi-v7a\n-DANDROID_PLATFORM\u003dandroid-21\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/armeabi-v7a\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DANDROID_NDK\u003d/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462\n-DCMAKE_SYSTEM_NAME\u003dAndroid\n-DCMAKE_ANDROID_ARCH_ABI\u003darmeabi-v7a\n-DCMAKE_SYSTEM_VERSION\u003d21\n-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\n-DCMAKE_ANDROID_NDK\u003d/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462\n-DCMAKE_TOOLCHAIN_FILE\u003d/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake\n-G Ninja\n-DCMAKE_MAKE_PROGRAM\u003d/Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja\njvmArgs : \n\n"
-  },
-  {
-    "level": "INFO",
-    "message": "done executing cmake"
-  },
-  {
-    "level": "INFO",
-    "message": "write build output /Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a/build_output.txt"
-  },
-  {
-    "level": "INFO",
-    "message": "write command file /Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a/build_command.txt"
+    "message": "JSON \u0027/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/armeabi-v7a/android_gradle_build.json\u0027 was up-to-date"
   },
   {
     "level": "INFO",
