@@ -2,8 +2,7 @@
   "stringTable": {
     "0": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a",
     "1": "--target=aarch64-none-linux-android21 --gcc-toolchain=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dnative_lib_EXPORTS -I/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -L/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg -O0 -fno-limit-debug-info -fPIC",
-    "2": "--target=aarch64-none-linux-android21 --gcc-toolchain=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dget_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC",
-    "3": "--target=aarch64-none-linux-android21 --gcc-toolchain=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC"
+    "2": "--target=aarch64-none-linux-android21 --gcc-toolchain=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC"
   },
   "buildFiles": [
     "/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/build/cmake/platforms.cmake",
@@ -41,7 +40,7 @@
         }
       ],
       "headers": [],
-      "output": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libget.so"
+      "output": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/bin/libget.a"
     },
     "native-lib-Debug-arm64-v8a": {
       "buildCommand": "/Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a\" native-lib",
@@ -57,6 +56,11 @@
         },
         {
           "src": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/cmake-lib.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg-lib.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
@@ -88,27 +92,27 @@
       "files": [
         {
           "src": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/libcount/add.cpp",
-          "flagsOrdinal": 3,
+          "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
           "src": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/libcount/div.cpp",
-          "flagsOrdinal": 3,
+          "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
           "src": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/libcount/mul.cpp",
-          "flagsOrdinal": 3,
+          "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
           "src": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/libcount/sub.cpp",
-          "flagsOrdinal": 3,
+          "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a/cpp/libcount/libcount.a"
+      "output": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/bin/libcount.a"
     }
   },
   "toolchains": {

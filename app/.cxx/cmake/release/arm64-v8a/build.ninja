@@ -59,35 +59,42 @@ build cmake_object_order_depends_target_native-lib: phony || cmake_object_order_
 build CMakeFiles/native-lib.dir/cpp/MyParcel.cpp.o: CXX_COMPILER__native-lib /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/MyParcel.cpp || cmake_object_order_depends_target_native-lib
   DEFINES = -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles/native-lib.dir/cpp/MyParcel.cpp.o.d
-  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -L/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg -O2 -DNDEBUG  -fPIC
   INCLUDES = -I/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/include
   OBJECT_DIR = CMakeFiles/native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles/native-lib.dir/cpp
 build CMakeFiles/native-lib.dir/cpp/cmake-lib.cpp.o: CXX_COMPILER__native-lib /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/cmake-lib.cpp || cmake_object_order_depends_target_native-lib
   DEFINES = -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles/native-lib.dir/cpp/cmake-lib.cpp.o.d
-  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -L/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg -O2 -DNDEBUG  -fPIC
+  INCLUDES = -I/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/include
+  OBJECT_DIR = CMakeFiles/native-lib.dir
+  OBJECT_FILE_DIR = CMakeFiles/native-lib.dir/cpp
+build CMakeFiles/native-lib.dir/cpp/ffmpeg-lib.cpp.o: CXX_COMPILER__native-lib /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg-lib.cpp || cmake_object_order_depends_target_native-lib
+  DEFINES = -Dnative_lib_EXPORTS
+  DEP_FILE = CMakeFiles/native-lib.dir/cpp/ffmpeg-lib.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -L/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg -O2 -DNDEBUG  -fPIC
   INCLUDES = -I/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/include
   OBJECT_DIR = CMakeFiles/native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles/native-lib.dir/cpp
 build CMakeFiles/native-lib.dir/cpp/native-lib.cpp.o: CXX_COMPILER__native-lib /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/native-lib.cpp || cmake_object_order_depends_target_native-lib
   DEFINES = -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles/native-lib.dir/cpp/native-lib.cpp.o.d
-  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -L/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg -O2 -DNDEBUG  -fPIC
   INCLUDES = -I/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/include
   OBJECT_DIR = CMakeFiles/native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles/native-lib.dir/cpp
 build CMakeFiles/native-lib.dir/cpp/native-lib2.cpp.o: CXX_COMPILER__native-lib /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/native-lib2.cpp || cmake_object_order_depends_target_native-lib
   DEFINES = -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles/native-lib.dir/cpp/native-lib2.cpp.o.d
-  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -L/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg -O2 -DNDEBUG  -fPIC
   INCLUDES = -I/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/include
   OBJECT_DIR = CMakeFiles/native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles/native-lib.dir/cpp
 build CMakeFiles/native-lib.dir/cpp/parcel-lib.cpp.o: CXX_COMPILER__native-lib /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/parcel-lib.cpp || cmake_object_order_depends_target_native-lib
   DEFINES = -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles/native-lib.dir/cpp/parcel-lib.cpp.o.d
-  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -L/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg -O2 -DNDEBUG  -fPIC
   INCLUDES = -I/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/include
   OBJECT_DIR = CMakeFiles/native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles/native-lib.dir/cpp
@@ -99,15 +106,10 @@ build CMakeFiles/native-lib.dir/cpp/parcel-lib.cpp.o: CXX_COMPILER__native-lib /
 #############################################
 # Link the shared library /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so
 
-ident0 = /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/}/libavfilter.so
-ident1 = /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/}/libavformat.so
-ident2 = /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/}/libavutil.so
-ident3 = /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/}/libswresample.so
-ident4 = /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/}/libswscale.so
-build /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so: CXX_SHARED_LIBRARY_LINKER__native-lib CMakeFiles/native-lib.dir/cpp/MyParcel.cpp.o CMakeFiles/native-lib.dir/cpp/cmake-lib.cpp.o CMakeFiles/native-lib.dir/cpp/native-lib.cpp.o CMakeFiles/native-lib.dir/cpp/native-lib2.cpp.o CMakeFiles/native-lib.dir/cpp/parcel-lib.cpp.o | /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/release/obj/arm64-v8a/libget.so cpp/libcount/libcount.a /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/libavcodec.so $ident0 $ident1 $ident2 $ident3 $ident4 /Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so || /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/release/obj/arm64-v8a/libget.so cpp/libcount/libcount.a
-  LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG
+build /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so: CXX_SHARED_LIBRARY_LINKER__native-lib CMakeFiles/native-lib.dir/cpp/MyParcel.cpp.o CMakeFiles/native-lib.dir/cpp/cmake-lib.cpp.o CMakeFiles/native-lib.dir/cpp/ffmpeg-lib.cpp.o CMakeFiles/native-lib.dir/cpp/native-lib.cpp.o CMakeFiles/native-lib.dir/cpp/native-lib2.cpp.o CMakeFiles/native-lib.dir/cpp/parcel-lib.cpp.o | /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/release/obj/arm64-v8a/libget.so cpp/libcount/libcount.a /Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so || /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/release/obj/arm64-v8a/libget.so cpp/libcount/libcount.a
+  LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -L/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg -O2 -DNDEBUG
   LINK_FLAGS = -Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments
-  LINK_LIBRARIES = /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/release/obj/arm64-v8a/libget.so cpp/libcount/libcount.a /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/libavcodec.so /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/}/libavfilter.so /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/}/libavformat.so /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/}/libavutil.so /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/}/libswresample.so /Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/cpp/ffmpeg/}/libswscale.so -llog -latomic -lm
+  LINK_LIBRARIES = /Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/release/obj/arm64-v8a/libget.so cpp/libcount/libcount.a -lavcodec -lavfilter -lavformat -lavutil -lswresample -lswscale -llog -latomic -lm
   OBJECT_DIR = CMakeFiles/native-lib.dir
   POST_BUILD = :
   PRE_LINK = :

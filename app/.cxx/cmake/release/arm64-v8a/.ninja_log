@@ -1,3 +1,5 @@
 # ninja log v5
 0	145	1662014698	build.ninja	9d6b1d691b1c1c09
 0	35	0	clean	f6b3a861aca1db4c
+1	142	1662017342	build.ninja	9d6b1d691b1c1c09
+0	15	0	clean	f6b3a861aca1db4c

@@ -33,6 +33,7 @@ find_library( # Sets the name of the path variable.
         log)
 
 #TODO 多CMakeLists文件处理方式
+#ADD_SUBDIRECTORY就是可以找到子目录，执行子目录的cmake
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp/libget)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp/libcount)
 
@@ -78,8 +79,6 @@ target_link_libraries( # Specifies the target library.
         native-lib
         get # 具体的库 链接到 libnative-lib.so里面去
         count # 具体的库 链接到 libnative-lib.so里面去
-
-
 #        -Wl,--start-group # 忽略顺序引发的问题
 #        avcodec avfilter avformat avutil swresample swscale
 #        -Wl,--end-group

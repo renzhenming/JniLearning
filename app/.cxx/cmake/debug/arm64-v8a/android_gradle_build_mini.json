@@ -15,7 +15,7 @@
       "artifactName": "get",
       "buildCommand": "/Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a\" get",
       "abi": "arm64-v8a",
-      "output": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/build/intermediates/cmake/debug/obj/arm64-v8a/libget.so"
+      "output": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/bin/libget.a"
     },
     "native-lib-Debug-arm64-v8a": {
       "artifactName": "native-lib",
@@ -27,7 +27,7 @@
       "artifactName": "count",
       "buildCommand": "/Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a\" count",
       "abi": "arm64-v8a",
-      "output": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/.cxx/cmake/debug/arm64-v8a/cpp/libcount/libcount.a"
+      "output": "/Users/renzhenming/AndroidStudioProjects/JniLearning/app/src/main/bin/libcount.a"
     }
   }
 }

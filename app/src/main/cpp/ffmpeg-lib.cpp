@@ -6,7 +6,7 @@
 
 // 采用C的编译方式
 extern "C" {
-#include <libavutil/avutil.h>
+#include "ffmpeg/include/libavutil/avutil.h"
 }
 
 #define TAG "JNISTUDY"

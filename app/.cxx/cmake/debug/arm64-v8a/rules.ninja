@@ -49,11 +49,11 @@ rule C_COMPILER__get
 
 
 #############################################
-# Rule for linking C shared library.
+# Rule for linking C static library.
 
-rule C_SHARED_LIBRARY_LINKER__get
-  command = $PRE_LINK && /Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -fPIC $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared $SONAME_FLAG$SONAME -o $TARGET_FILE $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
-  description = Linking C shared library $TARGET_FILE
+rule C_STATIC_LIBRARY_LINKER__get
+  command = $PRE_LINK && /Users/renzhenming/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake -E remove $TARGET_FILE && /Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/aarch64-linux-android-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/renzhenming/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/aarch64-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
 
